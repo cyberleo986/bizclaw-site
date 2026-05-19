@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexusFlow AI — Websites That Work While You Sleep</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #111827;
+            background: #F9FAFB;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%);
+            color: white;
+            padding: 100px 0 80px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #10B981;
+            color: white;
+            padding: 18px 48px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+        }
+        
+        /* Problem */
+        .problem {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .problem h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .problem > .container > p {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #6B7280;
+            margin-bottom: 60px;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .stat-card {
+            text-align: center;
+            padding: 30px;
+            border-radius: 16px;
+            background: #F9FAFB;
+        }
+        
+        .stat-card .number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #6366F1;
+            display: block;
+        }
+        
+        .stat-card p {
+            color: #6B7280;
+            margin-top: 10px;
+        }
+        
+        /* Solution */
+        .solution {
+            padding: 80px 0;
+            background: #F9FAFB;
+        }
+        
+        .solution h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .feature h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+        
+        .feature p {
+            color: #6B7280;
+            line-height: 1.6;
+        }
+        
+        /* Pricing */
+        .pricing {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .pricing h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .pricing > .container > p {
+            text-align: center;
+            color: #6B7280;
+            margin-bottom: 60px;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .pricing-card {
+            background: #F9FAFB;
+            padding: 50px 40px;
+            border-radius: 16px;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+        
+        .pricing-card:hover {
+            border-color: #6366F1;
+        }
+        
+        .pricing-card.featured {
+            background: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%);
+            color: white;
+            transform: scale(1.05);
+        }
+        
+        .pricing-card.featured p,
+        .pricing-card.featured li {
+            color: rgba(255,255,255,0.9);
+        }
+        
+        .pricing-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .price {
+            font-size: 3rem;
+            font-weight: 800;
+            margin: 20px 0;
+        }
+        
+        .price span {
+            font-size: 1rem;
+            font-weight: 400;
+            opacity: 0.7;
+        }
+        
+        .pricing-card ul {
+            list-style: none;
+            margin: 30px 0;
+            text-align: left;
+        }
+        
+        .pricing-card li {
+            padding: 10px 0;
+            color: #6B7280;
+        }
+        
+        .pricing-card li:before {
+            content: "✓ ";
+            color: #10B981;
+            font-weight: bold;
+        }
+        
+        .pricing-card.featured li:before {
+            color: #10B981;
+        }
+        
+        .pricing-card .cta-button {
+            margin-top: 20px;
+            background: #6366F1;
+        }
+        
+        .pricing-card.featured .cta-button {
+            background: #10B981;
+        }
+        
+        /* CTA */
+        .cta-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #111827 0%, #1F2937 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            background: #111827;
+            color: #6B7280;
+            text-align: center;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .pricing-card.featured {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>Get a Website That Captures Leads While You Sleep</h1>
+            <p>Professional websites + AI lead capture for local businesses. No tech skills needed. Ready in 48 hours.</p>
+            <a href="https://tally.so/r/nexusflow" class="cta-button">Get Your Website — $497</a>
+        </div>
+    </section>
+    
+    <!-- Problem -->
+    <section class="problem">
+        <div class="container">
+            <h2>You're Losing Customers Every Day</h2>
+            <p>46% of local businesses don't have a website. The ones that do are stealing your customers.</p>
+            <div class="stats">
+                <div class="stat-card">
+                    <span class="number">46%</span>
+                    <p>of small businesses have no website</p>
+                </div>
+                <div class="stat-card">
+                    <span class="number">70%</span>
+                    <p>of customers search online first</p>
+                </div>
+                <div class="stat-card">
+                    <span class="number">$0</span>
+                    <p>revenue from customers who can't find you</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Solution -->
+    <section class="solution">
+        <div class="container">
+            <h2>What You Get</h2>
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Professional Website</h3>
+                    <p>3-page site built for your business. Mobile-friendly, fast-loading, and designed to convert visitors into customers.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI Lead Capture</h3>
+                    <p>Smart contact form that qualifies leads automatically. Every visitor gets followed up with — even at 2 AM.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">⚡</div>
+                    <h3>48-Hour Delivery</h3>
+                    <p>No waiting weeks for a designer. We build fast because we know speed matters for your business.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Pricing -->
+    <section class="pricing">
+        <div class="container">
+            <h2>Simple Pricing</h2>
+            <p>One-time fee. No monthly contracts unless you want ongoing lead generation.</p>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Website + Lead Capture</h3>
+                    <div class="price">$497 <span>one-time</span></div>
+                    <ul>
+                        <li>3-page professional website</li>
+                        <li>Mobile-responsive design</li>
+                        <li>Contact form with email delivery</li>
+                        <li>Basic SEO setup</li>
+                        <li>SSL certificate</li>
+                        <li>48-hour delivery</li>
+                    </ul>
+                    <a href="https://tally.so/r/nexusflow" class="cta-button">Get Started</a>
+                </div>
+                <div class="pricing-card featured">
+                    <h3>Lead Machine</h3>
+                    <div class="price">$997 <span>/month</span></div>
+                    <ul>
+                        <li>Everything in Website package</li>
+                        <li>AI chatbot on your site</li>
+                        <li>Auto-response emails</li>
+                        <li>Lead tracking dashboard</li>
+                        <li>Weekly lead reports</li>
+                        <li>Monthly optimization</li>
+                    </ul>
+                    <a href="https://tally.so/r/nexusflow" class="cta-button">Upgrade to Lead Machine</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Stop Losing Customers to Competitors</h2>
+            <p>Every day without a website is a day your competitors are winning.</p>
+            <a href="https://tally.so/r/nexusflow" class="cta-button">Get Started Now — $497</a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p> NexusFlow AI. Built for local businesses.</p>
+        </div>
+    </footer>
+</body>
+</html>
