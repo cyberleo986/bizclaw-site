@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenScape Landscaping — Professional Landscape Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #111827;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: #059669;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #059669 0%, #34D399 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #059669;
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+        
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+        
+        .features {
+            padding: 60px 0;
+            background: #ECFDF5;
+        }
+        
+        .features h3 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: #111827;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .feature-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #059669;
+        }
+        
+        .services {
+            padding: 60px 0;
+        }
+        
+        .services h3 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
+        
+        .service-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .service-item {
+            background: #D1FAE5;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid #059669;
+        }
+        
+        .service-item h4 {
+            margin-bottom: 10px;
+            color: #065F46;
+        }
+        
+        .contact {
+            padding: 60px 0;
+            background: #111827;
+            color: white;
+            text-align: center;
+        }
+        
+        .contact h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        
+        .phone {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #34D399;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: #D1FAE5;
+            color: #065F46;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin: 5px;
+        }
+        
+        footer {
+            background: #1F2937;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        .powered-by {
+            background: #D1FAE5;
+            color: #065F46;
+            padding: 15px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        
+        .powered-by a {
+            color: #059669;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🌿 GreenScape Landscaping</h1>
+            <p>Professional Landscape Design & Maintenance</p>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <h2>Transform Your Outdoor Space</h2>
+            <p>Beautiful, functional landscapes for Phoenix homes and businesses. From design to maintenance, we create outdoor spaces you'll love.</p>
+            <a href="#contact" class="cta-button">Get a Free Estimate</a>
+        </div>
+    </section>
+    
+    <section class="features">
+        <div class="container">
+            <h3>Why Choose GreenScape?</h3>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4>🎨 Custom Design</h4>
+                    <p>Every landscape is unique. We create custom designs tailored to your property, style, and budget. No cookie-cutter solutions.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>🌵 Desert-Smart Plants</h4>
+                    <p>Water-wise landscaping with native and drought-tolerant plants. Save money on water bills while keeping your yard beautiful.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>🛡️ Licensed & Insured</h4>
+                    <p>Full licensing and comprehensive insurance. Your property is protected, and all work meets local standards.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="services">
+        <div class="container">
+            <h3>Our Landscaping Services</h3>
+            <div class="service-list">
+                <div class="service-item">
+                    <h4>🌳 Landscape Design</h4>
+                    <p>Custom landscape design for residential and commercial properties. 3D renderings, plant selection, and full plans.</p>
+                </div>
+                <div class="service-item">
+                    <h4>🌵 Xeriscaping</h4>
+                    <p>Water-efficient desert landscaping. Native plants, gravel, boulders, and drip irrigation for sustainable beauty.</p>
+                </div>
+                <div class="service-item">
+                    <h4>🌱 Lawn Installation</h4>
+                    <p>Sod and artificial turf installation. Green lawns that stay beautiful year-round with minimal maintenance.</p>
+                </div>
+                <div class="service-item">
+                    <h4>🔥 Outdoor Living</h4>
+                    <p>Patio design, fire pits, outdoor kitchens, and pergolas. Extend your living space into the backyard.</p>
+                </div>
+                <div class="service-item">
+                    <h4>🚿 Irrigation Systems</h4>
+                    <p>Smart drip irrigation and sprinkler systems. Save water and keep plants healthy with automated watering.</p>
+                </div>
+                <div class="service-item">
+                    <h4>🧹 Maintenance Plans</h4>
+                    <p>Weekly, bi-weekly, or monthly maintenance. Trimming, fertilizing, weed control, and seasonal cleanups.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="contact" id="contact">
+        <div class="container">
+            <h3>Get Your Free Landscape Consultation</h3>
+            <p class="contact-info">Call or text us anytime. We respond within 30 minutes during business hours.</p>
+            <p class="phone">📞 (602) 555-0165</p>
+            <div style="margin-top: 20px;">
+                <span class="badge">Free Estimates</span>
+                <span class="badge">Same-Day Consultations</span>
+                <span class="badge">Satisfaction Guaranteed</span>
+            </div>
+        </div>
+    </section>
+    
+    <div class="powered-by">
+        <div class="container">
+            🌿 Want a website like this for your landscaping business? <a href="https://cyberleo986.github.io">Get one for $497 →</a>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>© 2026 GreenScape Landscaping | Licensed Arizona Contractor | ROC #345678</p>
+            <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.7;">Website built by <a href="https://cyberleo986.github.io" style="color: #34D399;">NexusFlow AI</a></p>
+        </div>
+    </footer>
+</body>
+</html>
