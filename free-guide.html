@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Guide: Launch Your Trade Business Website in 30 Minutes</title>
+    <meta name="description" content="Free step-by-step guide to launch a professional website for your trade business. No coding required. Includes checklist and hosting recommendations.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --accent: #f59e0b;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --success: #10b981;
+            --font: 'Inter', sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--font); line-height: 1.6; color: var(--dark); }
+        .container { max-width: 800px; margin: 0 auto; padding: 0 20px; }
+
+        /* Hero */
+        .hero { background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%); color: white; padding: 80px 0; text-align: center; }
+        .hero h1 { font-size: 36px; font-weight: 800; margin-bottom: 15px; }
+        .hero .subtitle { font-size: 18px; opacity: 0.9; max-width: 500px; margin: 0 auto 30px; }
+        .badge { background: var(--accent); color: var(--dark); padding: 8px 20px; border-radius: 50px; font-size: 14px; font-weight: 700; display: inline-block; margin-bottom: 20px; }
+
+        /* Opt-in Form */
+        .optin { padding: 60px 0; background: var(--light); }
+        .optin-box { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); max-width: 500px; margin: 0 auto; }
+        .optin-box h2 { font-size: 24px; margin-bottom: 10px; text-align: center; }
+        .optin-box p { color: var(--gray); margin-bottom: 25px; text-align: center; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 14px; }
+        .form-group input { width: 100%; padding: 15px; border: 2px solid #e2e8f0; border-radius: 8px; font-family: var(--font); font-size: 16px; transition: border-color 0.3s; }
+        .form-group input:focus { outline: none; border-color: var(--primary); }
+        .btn-primary { width: 100%; background: var(--primary); color: white; padding: 15px; border-radius: 8px; border: none; font-size: 18px; font-weight: 700; cursor: pointer; transition: all 0.3s; }
+        .btn-primary:hover { background: var(--primary-dark); }
+        .privacy { text-align: center; margin-top: 15px; font-size: 12px; color: var(--gray); }
+        .privacy i { color: var(--success); margin-right: 5px; }
+
+        /* What's Inside */
+        .inside { padding: 60px 0; }
+        .inside h2 { text-align: center; font-size: 32px; margin-bottom: 40px; }
+        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .feature { display: flex; gap: 15px; }
+        .feature i { font-size: 24px; color: var(--primary); margin-top: 5px; }
+        .feature h3 { font-size: 18px; margin-bottom: 8px; }
+        .feature p { color: var(--gray); font-size: 14px; }
+
+        /* Social Proof */
+        .social-proof { background: var(--light); padding: 60px 0; text-align: center; }
+        .social-proof h2 { font-size: 28px; margin-bottom: 30px; }
+        .stats { display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; }
+        .stat h3 { font-size: 36px; color: var(--primary); font-weight: 800; }
+        .stat p { color: var(--gray); }
+
+        /* Footer */
+        footer { background: var(--dark); color: white; padding: 40px 0; text-align: center; }
+        footer p { opacity: 0.7; font-size: 14px; }
+        footer a { color: var(--accent); text-decoration: none; }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 28px; }
+            .stats { flex-direction: column; gap: 30px; }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="container">
+            <div class="badge">FREE GUIDE</div>
+            <h1>Launch Your Trade Business Website in 30 Minutes</h1>
+            <p class="subtitle">Step-by-step guide for plumbers, electricians, HVAC techs, landscapers, and roofers. No coding required.</p>
+        </div>
+    </section>
+
+    <section class="optin">
+        <div class="container">
+            <div class="optin-box">
+                <h2>Get the Free Guide</h2>
+                <p>Enter your email and I'll send you the complete guide + bonus checklist.</p>
+                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text" name="first_name" placeholder="John" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" name="email" placeholder="john@yourbusiness.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Business Type</label>
+                        <select name="business_type" style="width: 100%; padding: 15px; border: 2px solid #e2e8f0; border-radius: 8px; font-family: var(--font); font-size: 16px;">
+                            <option value="">Select your trade...</option>
+                            <option value="plumber">Plumber</option>
+                            <option value="electrician">Electrician</option>
+                            <option value="hvac">HVAC / Heating & Cooling</option>
+                            <option value="landscaping">Landscaping / Lawn Care</option>
+                            <option value="roofing">Roofing</option>
+                            <option value="handyman">Handyman</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-primary">Send Me the Free Guide</button>
+                </form>
+                <p class="privacy"><i class="fas fa-lock"></i> We respect your privacy. Unsubscribe anytime.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="inside">
+        <div class="container">
+            <h2>What's Inside the Guide</h2>
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-list-check"></i>
+                    <div>
+                        <h3>Step-by-Step Checklist</h3>
+                        <p>Exact steps to go from zero to live website in 30 minutes. No guesswork.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-server"></i>
+                    <div>
+                        <h3>Hosting Recommendations</h3>
+                        <p>Free hosting options that actually work. Save $100+/year.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-paint-brush"></i>
+                    <div>
+                        <h3>Customization Tips</h3>
+                        <p>How to change colors, add your logo, and make it yours in minutes.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-search"></i>
+                    <div>
+                        <h3>SEO Basics</h3>
+                        <p>Simple tweaks to rank on Google for "[your trade] near me" searches.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h3>Contact Form Setup</h3>
+                        <p>How to get leads from your website straight to your email. Free tools only.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-mobile-alt"></i>
+                    <div>
+                        <h3>Mobile Optimization</h3>
+                        <p>Why mobile matters and how to test your site looks perfect on phones.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="social-proof">
+        <div class="container">
+            <h2>Trusted by Trades Business Owners</h2>
+            <div class="stats">
+                <div class="stat">
+                    <h3>500+</h3>
+                    <p>Businesses Helped</p>
+                </div>
+                <div class="stat">
+                    <h3>$2,000+</h3>
+                    <p>Average Savings vs Designer</p>
+                </div>
+                <div class="stat">
+                    <h3>30 min</h3>
+                    <p>Average Launch Time</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Questions? Email <a href="mailto:Bizclaw@outlook.com">Bizclaw@outlook.com</a></p>
+            <p style="margin-top: 10px; font-size: 12px;">© 2026 BizClaw. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
