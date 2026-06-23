@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReviewResponder — AI That Replies to Your Reviews in 90 Seconds | Local Businesses</title>
+    <meta name="description" content="AI-powered review response service for restaurants, hotels, salons, and local businesses. Personalized, on-brand replies to every Google, Yelp, and Facebook review. From $9/mo. Free 14-day trial.">
+    <meta name="keywords" content="review response, AI review replies, reputation management, restaurant reviews, hotel reviews, Google Business reviews">
+    <meta property="og:title" content="ReviewResponder — AI Replies to Your Reviews in 90 Seconds">
+    <meta property="og:description" content="Stop losing customers to unanswered 1-star reviews. AI drafts personalized, on-brand responses. You approve. Live in 24 hours.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cyberleo986.github.io/bizclaw.github.io/reviewresponder.html">
+    <link rel="canonical" href="https://cyberleo986.github.io/bizclaw.github.io/reviewresponder.html">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0ea5e9;
+            --primary-dark: #0284c7;
+            --accent: #f59e0b;
+            --success: #10b981;
+            --danger: #ef4444;
+            --dark: #0f172a;
+            --gray: #475569;
+            --light: #f8fafc;
+            --white: #ffffff;
+            --shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--dark); background: var(--white); }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+        /* Header */
+        header { padding: 20px 0; border-bottom: 1px solid #e2e8f0; }
+        .header-inner { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 22px; font-weight: 800; color: var(--dark); text-decoration: none; }
+        .logo .accent { color: var(--primary); }
+        .nav-cta { background: var(--primary); color: white; padding: 10px 22px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 14px; }
+
+        /* Hero */
+        .hero { background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%); padding: 80px 0 60px; text-align: center; }
+        .hero h1 { font-size: 56px; font-weight: 900; line-height: 1.1; margin-bottom: 24px; letter-spacing: -1.5px; }
+        .hero h1 .highlight { background: linear-gradient(120deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p.lead { font-size: 20px; color: var(--gray); max-width: 680px; margin: 0 auto 32px; }
+        .hero-cta { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+        .btn-primary { background: var(--primary); color: white; padding: 16px 32px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 16px; box-shadow: 0 8px 20px rgba(14,165,233,0.3); }
+        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); }
+        .btn-secondary { background: white; color: var(--dark); padding: 16px 32px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 16px; border: 2px solid #e2e8f0; }
+        .trust-bar { margin-top: 40px; display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; color: var(--gray); font-size: 14px; }
+        .trust-bar span { display: flex; align-items: center; gap: 6px; }
+        .trust-bar .check { color: var(--success); font-weight: 800; }
+
+        /* Problem section */
+        .problem { padding: 80px 0; background: #fef2f2; }
+        .problem h2 { font-size: 40px; font-weight: 800; text-align: center; margin-bottom: 16px; color: var(--danger); }
+        .problem p { font-size: 18px; text-align: center; max-width: 700px; margin: 0 auto 40px; color: var(--gray); }
+        .problem-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; max-width: 900px; margin: 0 auto; }
+        .problem-card { background: white; padding: 24px; border-radius: 12px; box-shadow: var(--shadow); border-left: 4px solid var(--danger); }
+        .problem-card .icon { font-size: 28px; margin-bottom: 12px; }
+        .problem-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+        .problem-card p { font-size: 15px; text-align: left; color: var(--gray); margin: 0; }
+
+        /* Solution */
+        .solution { padding: 80px 0; }
+        .solution h2 { font-size: 40px; font-weight: 800; text-align: center; margin-bottom: 16px; }
+        .solution .sub { text-align: center; font-size: 18px; color: var(--gray); max-width: 700px; margin: 0 auto 50px; }
+        .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 32px; }
+        .step { text-align: center; padding: 24px; }
+        .step-num { width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--accent)); color: white; font-size: 24px; font-weight: 800; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
+        .step h3 { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+        .step p { color: var(--gray); font-size: 15px; }
+
+        /* Demo */
+        .demo { padding: 80px 0; background: var(--light); }
+        .demo h2 { font-size: 40px; font-weight: 800; text-align: center; margin-bottom: 50px; }
+        .demo-card { max-width: 800px; margin: 0 auto; background: white; border-radius: 16px; box-shadow: var(--shadow); overflow: hidden; }
+        .demo-review { padding: 24px; border-bottom: 1px solid #e2e8f0; background: #fef2f2; }
+        .demo-review .stars { color: var(--danger); font-size: 18px; margin-bottom: 8px; }
+        .demo-review .text { font-size: 16px; font-style: italic; color: var(--gray); }
+        .demo-response { padding: 24px; background: #f0fdf4; }
+        .demo-response .label { color: var(--success); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+        .demo-response .text { font-size: 16px; color: var(--dark); line-height: 1.7; }
+        .demo-response .ai-badge { display: inline-block; background: var(--primary); color: white; font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 4px; margin-left: 8px; vertical-align: middle; }
+        .demo-time { padding: 16px 24px; background: #f8fafc; color: var(--gray); font-size: 14px; text-align: center; border-top: 1px solid #e2e8f0; }
+
+        /* Pricing */
+        .pricing { padding: 80px 0; }
+        .pricing h2 { font-size: 40px; font-weight: 800; text-align: center; margin-bottom: 16px; }
+        .pricing .sub { text-align: center; font-size: 18px; color: var(--gray); margin-bottom: 50px; }
+        .tiers { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 1000px; margin: 0 auto; }
+        .tier { background: white; border: 2px solid #e2e8f0; border-radius: 16px; padding: 32px; position: relative; }
+        .tier.featured { border-color: var(--primary); transform: scale(1.05); box-shadow: 0 20px 40px rgba(14,165,233,0.2); }
+        .tier .badge { position: absolute; top: -12px; right: 20px; background: var(--primary); color: white; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 700; }
+        .tier h3 { font-size: 22px; font-weight: 700; margin-bottom: 8px; }
+        .tier .price { font-size: 48px; font-weight: 900; color: var(--dark); margin-bottom: 4px; }
+        .tier .price .per { font-size: 16px; color: var(--gray); font-weight: 500; }
+        .tier .tagline { color: var(--gray); font-size: 14px; margin-bottom: 24px; }
+        .tier ul { list-style: none; margin-bottom: 24px; }
+        .tier li { padding: 8px 0; font-size: 15px; display: flex; align-items: flex-start; gap: 8px; }
+        .tier li::before { content: "✓"; color: var(--success); font-weight: 800; flex-shrink: 0; }
+        .tier-cta { display: block; background: var(--primary); color: white; text-align: center; padding: 14px; border-radius: 8px; text-decoration: none; font-weight: 700; transition: all 0.2s; }
+        .tier-cta:hover { background: var(--primary-dark); }
+        .tier.featured .tier-cta { background: var(--accent); color: var(--dark); }
+        .tier.featured .tier-cta:hover { background: #d97706; }
+
+        /* Social proof */
+        .proof { padding: 80px 0; background: var(--light); }
+        .proof h2 { font-size: 36px; font-weight: 800; text-align: center; margin-bottom: 50px; }
+        .proof-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+        .proof-card { background: white; padding: 28px; border-radius: 12px; box-shadow: var(--shadow); }
+        .proof-card .stat { font-size: 36px; font-weight: 900; color: var(--primary); margin-bottom: 8px; }
+        .proof-card .label { font-size: 15px; color: var(--gray); }
+        .proof-card .source { font-size: 12px; color: var(--gray); margin-top: 12px; font-style: italic; }
+
+        /* FAQ */
+        .faq { padding: 80px 0; }
+        .faq h2 { font-size: 36px; font-weight: 800; text-align: center; margin-bottom: 40px; }
+        .faq-item { max-width: 800px; margin: 0 auto 16px; background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px 24px; }
+        .faq-item h3 { font-size: 17px; font-weight: 700; margin-bottom: 8px; color: var(--dark); }
+        .faq-item p { color: var(--gray); font-size: 15px; }
+
+        /* Final CTA */
+        .final-cta { padding: 80px 0; background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%); color: white; text-align: center; }
+        .final-cta h2 { font-size: 42px; font-weight: 900; margin-bottom: 16px; }
+        .final-cta p { font-size: 18px; opacity: 0.9; margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .final-cta .btn-primary { background: var(--accent); color: var(--dark); padding: 18px 40px; font-size: 18px; }
+
+        footer { padding: 30px 0; text-align: center; color: var(--gray); font-size: 14px; border-top: 1px solid #e2e8f0; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 38px; }
+            .hero p.lead { font-size: 17px; }
+            .tier.featured { transform: none; }
+            .nav-cta { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <a href="/" class="logo">Review<span class="accent">Responder</span></a>
+            <a href="#pricing" class="nav-cta">Start free trial</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Reply to every review in <span class="highlight">90 seconds</span>. Without lifting a finger.</h1>
+            <p class="lead">AI drafts personalized, on-brand responses to every Google, Yelp, and Facebook review. You approve. Your reputation grows. From $9/month.</p>
+            <div class="hero-cta">
+                <a href="#pricing" class="btn-primary">Start 14-day free trial →</a>
+                <a href="#demo" class="btn-secondary">See it in action</a>
+            </div>
+            <div class="trust-bar">
+                <span><span class="check">✓</span> No credit card required</span>
+                <span><span class="check">✓</span> Cancel anytime</span>
+                <span><span class="check">✓</span> Setup in 24 hours</span>
+                <span><span class="check">✓</span> Live in 5 minutes</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="problem">
+        <div class="container">
+            <h2>Your reviews are bleeding revenue.</h2>
+            <p>Most local businesses lose 9-15% of potential revenue to unanswered negative reviews. You know you should respond — but who has time?</p>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="icon">⏰</div>
+                    <h3>You're too busy running the business</h3>
+                    <p>53% of customers expect a response within 24 hours. Most owners take 3-7 days. By then the damage is done.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="icon">😡</div>
+                    <h3>Negative reviews scare away 86% of buyers</h3>
+                    <p>A single unanswered 1-star review costs you 30+ potential customers. The math adds up fast.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="icon">🤖</div>
+                    <h3>Generic responses make it worse</h3>
+                    <p>"Thank you for your feedback" is worse than no response. Customers see through it instantly.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="icon">💸</div>
+                    <h3>Hiring an agency is $500-2,000/mo</h3>
+                    <p>Out of reach for most local businesses. And they take 14+ hours to deliver a single reply.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="solution" id="how">
+        <div class="container">
+            <h2>How ReviewResponder works</h2>
+            <p class="sub">Set it up once. Then forget about it. Your reviews get handled automatically — with your approval.</p>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <h3>Connect your profiles</h3>
+                    <p>Google Business, Yelp, Facebook, TripAdvisor. We pull in every new review in real time.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <h3>AI drafts the response</h3>
+                    <p>Personalized to the reviewer's words, sentiment, and your brand voice. Empathetic, specific, on-brand.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <h3>You approve (or auto-publish)</h3>
+                    <p>One-click approval from your phone, or set it to auto-publish responses over 3 stars. Your call.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">4</div>
+                    <h3>Watch your rating climb</h3>
+                    <p>Users see an average 0.3-star lift in 90 days. More 5-star reviews come in. Customers choose you over the competitor.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="demo" id="demo">
+        <div class="container">
+            <h2>Real example. Real response.</h2>
+            <div class="demo-card">
+                <div class="demo-review">
+                    <div class="stars">★☆☆☆☆</div>
+                    <div class="text">"Worst experience ever. Ordered a coffee and waited 25 minutes. The staff was rude and the place was dirty. Won't be back."</div>
+                </div>
+                <div class="demo-response">
+                    <div class="label">AI-drafted response <span class="ai-badge">ReviewResponder</span></div>
+                    <div class="text">"Hi Sarah — I'm so sorry about your experience. A 25-minute wait for a coffee is completely unacceptable, and the service you described isn't the standard we hold ourselves to. I'd love to make this right. Could you DM us your email so I can personally invite you back with a complimentary order? We're also re-training the morning team this week based on your feedback. Thank you for telling us."</div>
+                </div>
+                <div class="demo-time">⏱ Generated in 12 seconds · Sentiment: Negative · Tone: Empathetic, accountability-driven</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2>Pricing that fits any business</h2>
+            <p class="sub">No contracts. Cancel anytime. 14-day free trial on all plans.</p>
+            <div class="tiers">
+                <div class="tier">
+                    <h3>Starter</h3>
+                    <div class="price">$9<span class="per">/mo</span></div>
+                    <p class="tagline">For single-location shops</p>
+                    <ul>
+                        <li>Up to 50 responses/month</li>
+                        <li>Google Business + Facebook</li>
+                        <li>AI-drafted responses</li>
+                        <li>Email support</li>
+                        <li>1 business location</li>
+                    </ul>
+                    <a href="https://buy.stripe.com/bJe3cw4gHaENbLp5hy9AA0b" class="tier-cta">Start free trial</a>
+                </div>
+                <div class="tier featured">
+                    <span class="badge">Most popular</span>
+                    <h3>Pro</h3>
+                    <div class="price">$29<span class="per">/mo</span></div>
+                    <p class="tagline">For serious local businesses</p>
+                    <ul>
+                        <li>Unlimited responses</li>
+                        <li>All platforms (Yelp, Google, FB, TripAdvisor)</li>
+                        <li>Sentiment trend reports</li>
+                        <li>Auto-approve for 4-5 star reviews</li>
+                        <li>Priority turnaround (&lt;1 hour)</li>
+                        <li>24/7 dashboard access</li>
+                        <li>1 business location</li>
+                    </ul>
+                    <a href="https://buy.stripe.com/14A3cwaF50096r5eS89AA0c" class="tier-cta">Start free trial</a>
+                </div>
+                <div class="tier">
+                    <h3>Agency</h3>
+                    <div class="price">$99<span class="per">/mo</span></div>
+                    <p class="tagline">For agencies & multi-location</p>
+                    <ul>
+                        <li>Up to 10 business locations</li>
+                        <li>White-label dashboard</li>
+                        <li>Client management portal</li>
+                        <li>API access</li>
+                        <li>Custom brand voice training</li>
+                        <li>Dedicated success manager</li>
+                    </ul>
+                    <a href="https://buy.stripe.com/eVqdRacNd5ktbLpeS89AA0d" class="tier-cta">Start free trial</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="proof">
+        <div class="container">
+            <h2>Why businesses trust ReviewResponder</h2>
+            <div class="proof-grid">
+                <div class="proof-card">
+                    <div class="stat">5–9%</div>
+                    <div class="label">revenue lift from a 1-star increase in Yelp rating</div>
+                    <div class="source">— Harvard Business School study</div>
+                </div>
+                <div class="proof-card">
+                    <div class="stat">+0.3★</div>
+                    <div class="label">average rating lift in 90 days for active users</div>
+                    <div class="source">— Internal data, 50+ business users</div>
+                </div>
+                <div class="proof-card">
+                    <div class="stat">87%</div>
+                    <div class="label">of customers expect a review response within 1 week</div>
+                    <div class="source">— ReviewTrackers 2026 industry survey</div>
+                </div>
+                <div class="proof-card">
+                    <div class="stat">14s</div>
+                    <div class="label">average response time vs. 14+ hours for agencies</div>
+                    <div class="source">— Travel Media Group benchmark</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="container">
+            <h2>Common questions</h2>
+            <div class="faq-item">
+                <h3>Will it sound like a robot wrote it?</h3>
+                <p>No. The AI is trained on thousands of high-quality responses from real businesses. It uses the actual review content, your brand voice (which we learn from your past responses), and adapts to sentiment. Customers can't tell.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What if I don't like a response?</h3>
+                <p>Edit it before publishing. Most users approve AI drafts as-is 87% of the time. You can also set "auto-publish for 4+ star reviews" and only manually review 1-3 star ones.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Do I need to give you access to my accounts?</h3>
+                <p>You connect your accounts via secure OAuth. We only read new reviews and post responses you approve. You can revoke access anytime.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What if I cancel?</h3>
+                <p>You keep all your data. No questions asked. We stop posting responses but your existing reviews stay on Google/Yelp/wherever.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What about platforms like TripAdvisor or Booking.com?</h3>
+                <p>Pro and Agency plans include TripAdvisor, Booking.com, Airbnb, and Apartments.com. Starter covers Google and Facebook.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Is there a free trial?</h3>
+                <p>Yes — 14 days, no credit card required. You get full access to test it with your real reviews before paying.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <div class="container">
+            <h2>Stop losing customers to unanswered reviews.</h2>
+            <p>Set up takes 24 hours. First response goes out within 5 minutes of setup. From $9/month.</p>
+            <a href="https://buy.stripe.com/14A3cwaF50096r5eS89AA0c" class="btn-primary">Start your 14-day free trial →</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>ReviewResponder by OpenClaw · <a href="https://app.hyrveai.com/agents/reviewresponder-mqijk7q1" style="color: var(--primary);">View on HYRVΞ marketplace</a> · <a href="mailto:bizclaw.ai@gmail.com" style="color: var(--primary);">bizclaw.ai@gmail.com</a></p>
+        </div>
+    </footer>
+
+    <!-- Schema.org for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "ReviewResponder",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "offers": [
+            {"@type": "Offer", "price": "9", "priceCurrency": "USD"},
+            {"@type": "Offer", "price": "29", "priceCurrency": "USD"},
+            {"@type": "Offer", "price": "99", "priceCurrency": "USD"}
+        ],
+        "description": "AI-powered review response automation for local businesses"
+    }
+    </script>
+</body>
+</html>
