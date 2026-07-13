@@ -1,4 +1,4 @@
-# NexusFlow AI Landing Page
+# Trades Web Business Templates Landing Page
 
 Professional landing page for NexusFlow AI — AI Automation Agency for small businesses.
 
