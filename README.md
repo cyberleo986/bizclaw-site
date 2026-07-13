@@ -8,5 +8,5 @@ Professional landing page for NexusFlow AI — AI Automation Agency for small bu
 - Full Automation ($1,997/month)
 
 ## Contact
-- Phone: +1 (253) 867-8504
+- Phone: +1 (309) 237-9314
 - Built by BizClaw
