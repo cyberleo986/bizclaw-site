@@ -3,343 +3,294 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trades Website Templates — Complete Business Website Pack</title>
-    <meta name="description" content="5 professional website templates for trades businesses. Plumber, electrician, HVAC, landscaping, roofing. $47 each or $197 for all. Launch in 30 minutes.">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --primary: #2563eb;
-            --primary-dark: #1d4ed8;
-            --accent: #f59e0b;
-            --dark: #1e293b;
-            --light: #f8fafc;
-            --gray: #64748b;
-            --success: #10b981;
-            --font: 'Inter', sans-serif;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: var(--font); line-height: 1.6; color: var(--dark); }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-
-        /* Header */
-        header { background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 15px 0; position: sticky; top: 0; z-index: 100; }
-        header .container { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 24px; font-weight: 800; color: var(--primary); }
-        .logo span { color: var(--accent); }
-        .header-cta { background: var(--primary); color: white; padding: 10px 25px; border-radius: 8px; text-decoration: none; font-weight: 600; }
-
-        /* Hero */
-        .hero { background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%); color: white; padding: 100px 0; text-align: center; }
-        .hero h1 { font-size: 48px; font-weight: 800; margin-bottom: 20px; }
-        .hero .subtitle { font-size: 20px; margin-bottom: 30px; opacity: 0.9; max-width: 600px; margin-left: auto; margin-right: auto; }
-        .price-tag { background: var(--accent); color: var(--dark); padding: 15px 30px; border-radius: 50px; font-size: 24px; font-weight: 800; display: inline-block; margin-bottom: 30px; }
-        .hero-buttons { display: flex; gap: 20px; justify-content: center; margin-bottom: 40px; }
-        .btn-primary { background: var(--accent); color: var(--dark); padding: 15px 40px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 18px; display: inline-block; transition: all 0.3s; }
-        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(245,158,11,0.3); }
-        .btn-secondary { background: transparent; color: white; padding: 15px 40px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 18px; border: 2px solid white; display: inline-block; }
-        .trust-badges { display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; font-size: 14px; }
-        .trust-badges span { opacity: 0.8; }
-        .trust-badges i { margin-right: 8px; }
-
-        /* Templates Grid */
-        .templates { padding: 80px 0; background: var(--light); }
-        .templates h2 { text-align: center; font-size: 36px; margin-bottom: 15px; }
-        .templates .section-subtitle { text-align: center; color: var(--gray); margin-bottom: 50px; font-size: 18px; }
-        .templates-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .template-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: transform 0.3s; }
-        .template-card:hover { transform: translateY(-5px); }
-        .template-preview { height: 200px; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 48px; }
-        .template-info { padding: 30px; }
-        .template-info h3 { font-size: 20px; margin-bottom: 10px; }
-        .template-info p { color: var(--gray); margin-bottom: 15px; font-size: 14px; }
-        .template-features { list-style: none; margin-bottom: 20px; }
-        .template-features li { padding: 5px 0; font-size: 14px; }
-        .template-features i { color: var(--success); margin-right: 8px; }
-        .template-price { font-size: 24px; font-weight: 800; color: var(--primary); }
-        .template-price span { font-size: 14px; color: var(--gray); font-weight: 400; }
-
-        /* Bundle CTA */
-        .bundle { background: var(--dark); color: white; padding: 80px 0; text-align: center; }
-        .bundle h2 { font-size: 36px; margin-bottom: 20px; }
-        .bundle .subtitle { font-size: 18px; opacity: 0.9; margin-bottom: 30px; }
-        .bundle-price { font-size: 48px; font-weight: 800; color: var(--accent); margin-bottom: 10px; }
-        .bundle-price .original { font-size: 24px; text-decoration: line-through; opacity: 0.5; margin-right: 15px; }
-        .bundle-savings { background: var(--success); color: white; padding: 5px 15px; border-radius: 50px; font-size: 14px; font-weight: 600; display: inline-block; margin-bottom: 30px; }
-        .bundle-features { display: flex; gap: 40px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px; }
-        .bundle-features div { text-align: left; }
-        .bundle-features h4 { margin-bottom: 10px; }
-        .bundle-features ul { list-style: none; }
-        .bundle-features li { padding: 5px 0; opacity: 0.9; }
-        .bundle-features i { margin-right: 8px; color: var(--accent); }
-
-        /* FAQ */
-        .faq { padding: 80px 0; }
-        .faq h2 { text-align: center; font-size: 36px; margin-bottom: 50px; }
-        .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 30px; }
-        .faq-item { background: var(--light); padding: 30px; border-radius: 12px; }
-        .faq-item h3 { font-size: 18px; margin-bottom: 15px; }
-        .faq-item p { color: var(--gray); }
-
-        /* Footer */
-        footer { background: var(--dark); color: white; padding: 60px 0 20px; }
-        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
-        footer h3 { font-size: 20px; margin-bottom: 15px; }
-        footer p { opacity: 0.8; margin-bottom: 10px; font-size: 14px; }
-        footer a { color: var(--accent); text-decoration: none; }
-        .footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 14px; opacity: 0.6; }
-
-        /* Mobile */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 32px; }
-            .hero-buttons { flex-direction: column; }
-            .bundle-features { flex-direction: column; }
-            .footer-grid { grid-template-columns: 1fr; }
-            .faq-grid { grid-template-columns: 1fr; }
-        }
-    </style>
+    <title>BizClaw — Your AI Agent, Deployed. Running. On Retainer.</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header><div class="container">
-        <div class="logo">Trades<span>Web</span></div>
-        <nav style="display:flex;gap:20px;align-items:center;font-size:14px;">
-            <a href="saas.html" style="color:var(--primary);font-weight:600;text-decoration:none;">SaaS Resources</a>
-            <a href="#buy" class="header-cta">Get All Templates — $197</a>
-        </nav>
-    </div></header>
-
-    <section class="hero"><div class="container">
-        <div class="price-tag">5 Templates for $197</div>
-        <h1>Professional Websites for Trades Businesses</h1>
-        <p class="subtitle">Launch your business website in 30 minutes. No coding. No designers. Just replace placeholders and go live.</p>
-        <div class="hero-buttons">
-            <a href="#buy" class="btn-primary"><i class="fas fa-shopping-cart"></i> Buy Now — $197</a>
-            <a href="#templates" class="btn-secondary">View Templates</a>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container nav-container">
+            <a href="/" class="logo">BizClaw</a>
+            <div class="nav-links">
+                <a href="#product">Product</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#templates">Templates</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact" class="btn btn-primary">Get Started</a>
+            </div>
         </div>
-        <div class="trust-badges">
-            <span><i class="fas fa-check-circle"></i> Instant Download</span>
-            <span><i class="fas fa-check-circle"></i> Mobile Responsive</span>
-            <span><i class="fas fa-check-circle"></i> SEO Optimized</span>
-            <span><i class="fas fa-check-circle"></i> 7-Day Guarantee</span>
-        </div>
-    </div></section>
+    </nav>
 
-    <section class="templates" id="templates"><div class="container">
-        <h2>Choose Your Template</h2>
-        <p class="section-subtitle">Or get all 5 for $197 (save $38)</p>
-        <div class="templates-grid">
-            <div class="template-card">
-                <div class="template-preview"><i class="fas fa-faucet"></i></div>
-                <div class="template-info">
-                    <h3>Plumber Template</h3>
-                    <p>4-page website for plumbing businesses. Emergency service callouts, service descriptions, contact form.</p>
-                    <ul class="template-features">
-                        <li><i class="fas fa-check"></i> 4 complete pages</li>
-                        <li><i class="fas fa-check"></i> Mobile responsive</li>
-                        <li><i class="fas fa-check"></i> Lead capture form</li>
-                        <li><i class="fas fa-check"></i> Emergency CTA buttons</li>
-                    </ul>
-                    <div class="template-price">$47 <span>one-time</span></div>
-                    <a href="https://buy.stripe.com/3cIfZi9B19AJ8zdeS89AA01" class="btn-primary" style="display:block;text-align:center;margin-top:15px;padding:10px 20px;font-size:14px;">Buy Plumber Template</a>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Your AI Agent.<br>
+                    <span class="gradient-text">Deployed. Running. On Retainer.</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Stop buying chatbot toys. Get a real AI agent that handles WhatsApp Business, 
+                    email, SMS, and voice — trained on your business, operating 24/7, 
+                    with human handoff when it matters.
+                </p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-large btn-primary">Book Your Agent Setup</a>
+                    <a href="#product" class="btn btn-large btn-secondary">See How It Works</a>
                 </div>
-            </div>
-            <div class="template-card">
-                <div class="template-preview"><i class="fas fa-bolt"></i></div>
-                <div class="template-info">
-                    <h3>Electrician Template</h3>
-                    <p>4-page website for electrical contractors. Panel upgrades, EV charging, emergency repairs.</p>
-                    <ul class="template-features">
-                        <li><i class="fas fa-check"></i> 4 complete pages</li>
-                        <li><i class="fas fa-check"></i> Service pricing display</li>
-                        <li><i class="fas fa-check"></i> 24/7 emergency banner</li>
-                        <li><i class="fas fa-check"></i> License badge</li>
-                    </ul>
-                    <div class="template-price">$47 <span>one-time</span></div>
-                    <a href="https://buy.stripe.com/4gM6oIcNd7sB8zd5hy9AA02" class="btn-primary" style="display:block;text-align:center;margin-top:15px;padding:10px 20px;font-size:14px;">Buy Electrician Template</a>
-                </div>
-            </div>
-            <div class="template-card">
-                <div class="template-preview"><i class="fas fa-snowflake"></i></div>
-                <div class="template-info">
-                    <h3>HVAC Template</h3>
-                    <p>4-page website for heating & cooling businesses. Seasonal services, maintenance plans.</p>
-                    <ul class="template-features">
-                        <li><i class="fas fa-check"></i> 4 complete pages</li>
-                        <li><i class="fas fa-check"></i> Seasonal CTAs</li>
-                        <li><i class="fas fa-check"></i> Maintenance plan pricing</li>
-                        <li><i class="fas fa-check"></i> Energy efficiency focus</li>
-                    </ul>
-                    <div class="template-price">$47 <span>one-time</span></div>
-                    <a href="https://buy.stripe.com/8x25kEaF55kt16L9xO9AA03" class="btn-primary" style="display:block;text-align:center;margin-top:15px;padding:10px 20px;font-size:14px;">Buy HVAC Template</a>
-                </div>
-            </div>
-            <div class="template-card">
-                <div class="template-preview"><i class="fas fa-leaf"></i></div>
-                <div class="template-info">
-                    <h3>Landscaping Template</h3>
-                    <p>4-page website for landscape companies. Design services, maintenance programs, gallery-ready.</p>
-                    <ul class="template-features">
-                        <li><i class="fas fa-check"></i> 4 complete pages</li>
-                        <li><i class="fas fa-check"></i> Portfolio sections</li>
-                        <li><i class="fas fa-check"></i> Seasonal cleanup CTAs</li>
-                        <li><i class="fas fa-check"></i> Irrigation focus</li>
-                    </ul>
-                    <div class="template-price">$47 <span>one-time</span></div>
-                    <a href="https://buy.stripe.com/bJe8wQdRh14d2aP7pG9AA04" class="btn-primary" style="display:block;text-align:center;margin-top:15px;padding:10px 20px;font-size:14px;">Buy Landscaping Template</a>
-                </div>
-            </div>
-            <div class="template-card">
-                <div class="template-preview"><i class="fas fa-home"></i></div>
-                <div class="template-info">
-                    <h3>Roofing Template</h3>
-                    <p>4-page website for roofing contractors. Storm damage, inspections, insurance claims.</p>
-                    <ul class="template-features">
-                        <li><i class="fas fa-check"></i> 4 complete pages</li>
-                        <li><i class="fas fa-check"></i> Insurance claim CTA</li>
-                        <li><i class="fas fa-check"></i> Storm damage banner</li>
-                        <li><i class="fas fa-check"></i> Warranty highlights</li>
-                    </ul>
-                    <div class="template-price">$47 <span>one-time</span></div>
-                    <a href="https://buy.stripe.com/3cI4gA28z28h8zd4du9AA05" class="btn-primary" style="display:block;text-align:center;margin-top:15px;padding:10px 20px;font-size:14px;">Buy Roofing Template</a>
+                <div class="hero-trust">
+                    <div class="trust-badges">
+                        <span class="badge">⚡ Live in 48 hours</span>
+                        <span class="badge">🔒 WhatsApp Business API Official</span>
+                        <span class="badge">🎯 Custom-trained on your business</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div></section>
+    </header>
 
-    <section class="bundle" id="buy"><div class="container">
-        <h2>Get All 5 Templates</h2>
-        <p class="subtitle">Everything you need to launch websites for any trades business</p>
-        <div class="bundle-price"><span class="original">$235</span>$197</div>
-        <div class="bundle-savings">SAVE $38 (16% off)</div>
-        <div class="bundle-features">
-            <div>
-                <h4>What's Included</h4>
-                <ul>
-                    <li><i class="fas fa-check"></i> 5 complete template packs</li>
-                    <li><i class="fas fa-check"></i> 20 HTML pages total</li>
-                    <li><i class="fas fa-check"></i> 5 CSS style sheets</li>
-                    <li><i class="fas fa-check"></i> 5 README guides</li>
-                </ul>
-            </div>
-            <div>
-                <h4>Features</h4>
-                <ul>
-                    <li><i class="fas fa-check"></i> Mobile responsive</li>
-                    <li><i class="fas fa-check"></i> SEO optimized</li>
-                    <li><i class="fas fa-check"></i> Contact forms ready</li>
-                    <li><i class="fas fa-check"></i> Easy customization</li>
-                </ul>
-            </div>
-            <div>
-                <h4>Bonuses</h4>
-                <ul>
-                    <li><i class="fas fa-check"></i> Hosting setup guide</li>
-                    <li><i class="fas fa-check"></i> Color customization tips</li>
-                    <li><i class="fas fa-check"></i> SEO checklist</li>
-                    <li><i class="fas fa-check"></i> 30-day email support</li>
-                </ul>
+    <!-- Problem/Solution Section -->
+    <section class="section section-dark" id="product">
+        <div class="container">
+            <h2 class="section-title center">The Problem with "AI Chatbots"</h2>
+            <div class="comparison-grid">
+                <div class="comparison-card problem">
+                    <h3>❌ Traditional Chatbots</h3>
+                    <ul>
+                        <li>Generic responses that frustrate customers</li>
+                        <li>No access to your actual business data</li>
+                        <li>Can't handle complex workflows</li>
+                        <li>Requires constant manual oversight</li>
+                        <li>Hosted on someone else's servers</li>
+                    </ul>
+                </div>
+                <div class="comparison-card solution">
+                    <h3>✅ BizClaw Agent</h3>
+                    <ul>
+                        <li>Trained on your products, policies, and voice</li>
+                        <li>Reads your docs, accesses your tools</li>
+                        <li>Handles bookings, support, leads end-to-end</li>
+                        <li>Escalates to humans with full context</li>
+                        <li>Runs on your infrastructure or ours</li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <a href="https://buy.stripe.com/4gMcN67sTdQZ4iXdO49AA06" class="btn-primary"><i class="fas fa-shopping-cart"></i> Buy All 5 — $197</a>
-        <p style="margin-top: 20px; opacity: 0.7;"><i class="fas fa-shield-alt"></i> 7-day money-back guarantee</p>
-    </div></section>
+    </section>
 
-    <section class="bundle" style="background:linear-gradient(135deg,#1e293b 0%,#10b981 100%);" id="saas"><div class="container">
-        <h2>Want Us to Handle Everything?</h2>
-        <p class="subtitle">We set up, host, and manage your website. You focus on your business.</p>
-        <div style="display:flex;gap:30px;justify-content:center;flex-wrap:wrap;margin-bottom:40px;">
-            <div style="background:rgba(255,255,255,0.1);border-radius:12px;padding:30px;max-width:350px;text-align:left;">
-                <h3 style="color:#f59e0b;font-size:20px;margin-bottom:10px;">BizClaw Pro</h3>
-                <div style="font-size:36px;font-weight:800;color:white;margin-bottom:5px;">$97<span style="font-size:16px;font-weight:400;opacity:0.7;">/mo</span></div>
-                <p style="opacity:0.8;margin-bottom:15px;">Monthly updates, SEO optimization, lead tracking, and priority support.</p>
-                <ul style="list-style:none;opacity:0.9;">
-                    <li style="padding:5px 0;"><i class="fas fa-check" style="color:#f59e0b;margin-right:8px;"></i> Monthly content updates</li>
-                    <li style="padding:5px 0;"><i class="fas fa-check" style="color:#f59e0b;margin-right:8px;"></i> SEO optimization</li>
-                    <li style="padding:5px 0;"><i class="fas fa-check" style="color:#f59e0b;margin-right:8px;"></i> Lead tracking dashboard</li>
-                    <li style="padding:5px 0;"><i class="fas fa-check" style="color:#f59e0b;margin-right:8px;"></i> Priority email support</li>
-                </ul>
-                <a href="https://buy.stripe.com/aFadRa00r5kt4iXaBS9AA07" class="btn-primary" style="display:block;text-align:center;margin-top:15px;">Start Pro Plan</a>
-            </div>
-            <div style="background:rgba(255,255,255,0.15);border-radius:12px;padding:30px;max-width:350px;text-align:left;border:2px solid #f59e0b;">
-                <div style="background:#f59e0b;color:#1e293b;padding:3px 12px;border-radius:50px;font-size:12px;font-weight:700;display:inline-block;margin-bottom:10px;">BEST VALUE</div>
-                <h3 style="color:#f59e0b;font-size:20px;margin-bottom:10px;">BizClaw Elite</h3>
-                <div style="font-size:36px;font-weight:800;color:white;margin-bottom:5px;">$297<span style="font-size:16px;font-weight:400;opacity:0.7;">/mo</span></div>
-                <p style="opacity:0.8;margin-bottom:15px;">Custom-branded template + full management + Google Business optimization.</p>
-                <ul style="list-style:none;opacity:0.9;">
-                    <li style="padding:5px 0;"><i class="fas fa-check" style="color:#f59e0b;margin-right:8px;"></i> Custom-branded template</li>
-                    <li style="padding:5px 0;"><i class="fas fa-check" style="color:#f59e0b;margin-right:8px;"></i> Google Business optimization</li>
-                    <li style="padding:5px 0;"><i class="fas fa-check" style="color:#f59e0b;margin-right:8px;"></i> Monthly performance reports</li>
-                    <li style="padding:5px 0;"><i class="fas fa-check" style="color:#f59e0b;margin-right:8px;"></i> Everything in Pro</li>
-                </ul>
-                <a href="https://buy.stripe.com/28EeVe28z0092aP11i9AA08" class="btn-primary" style="display:block;text-align:center;margin-top:15px;">Start Elite Plan</a>
+    <!-- How It Works -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title center">How Your Agent Gets Built</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Discovery Call</h3>
+                    <p>We audit your current customer touchpoints — WhatsApp, email, SMS, voice — and map where an agent creates the most value.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Agent Training</h3>
+                    <p>We feed your agent your docs, FAQs, pricing, policies, and brand voice. It learns your business, not generic small talk.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Deploy & Test</h3>
+                    <p>Your agent goes live in a sandbox. You test real conversations. We tune until it handles 90%+ of inquiries without human help.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Live on Retainer</h3>
+                    <p>Agent goes live 24/7. Monthly retainer covers hosting, monitoring, updates, and quarterly optimization reviews.</p>
+                </div>
             </div>
         </div>
-        <p style="opacity:0.7;"><i class="fas fa-shield-alt"></i> Cancel anytime. No contracts. No setup fees.</p>
-    </div></section>
+    </section>
 
-    <section class="faq"><div class="container">
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-grid">
-            <div class="faq-item">
-                <h3>Do I need to know how to code?</h3>
-                <p>No coding required. Just find and replace the {{PLACEHOLDERS}} with your business info. If you can use Find & Replace in a text editor, you can launch this site.</p>
-            </div>
-            <div class="faq-item">
-                <h3>What do I need to customize it?</h3>
-                <p>Any text editor (Notepad, TextEdit, VS Code). Replace placeholders like {{BUSINESS_NAME}}, {{PHONE}}, {{EMAIL}}, {{CITY}} with your actual info.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Where can I host the website?</h3>
-                <p>Anywhere. We recommend GitHub Pages (free), Netlify Drop (free), or any web host. The README includes step-by-step hosting setup.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Is the contact form included?</h3>
-                <p>Yes. The contact page has a working form. Just sign up for a free Formspree account and paste your form ID. Instructions included.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Can I change colors and fonts?</h3>
-                <p>Yes. Colors are controlled by CSS variables in one file. Change a few hex codes and the whole site updates. Full instructions in the README.</p>
-            </div>
-            <div class="faq-item">
-                <h3>What's the refund policy?</h3>
-                <p>7-day money-back guarantee. Not satisfied? Email us for a full refund, no questions asked.</p>
+    <!-- Templates Section -->
+    <section class="section section-dark" id="templates">
+        <div class="container">
+            <h2 class="section-title center">Agent Templates — Ready to Customize</h2>
+            <p class="section-subtitle center">Start with a proven template, trained for your industry</p>
+            
+            <div class="templates-grid">
+                <div class="template-card">
+                    <div class="template-icon">💬</div>
+                    <h3>Customer Support Agent</h3>
+                    <p>Handles inquiries, troubleshooting, order status, returns. Escalates complex issues with full conversation history.</p>
+                    <span class="template-tag">Best for: E-commerce, SaaS</span>
+                </div>
+                <div class="template-card">
+                    <div class="template-icon">🎯</div>
+                    <h3>Lead Qualification Agent</h3>
+                    <p>Qualifies prospects, enriches data from web research, schedules sales calls, nurtures until ready.</p>
+                    <span class="template-tag">Best for: B2B services, Agencies</span>
+                </div>
+                <div class="template-card">
+                    <div class="template-icon">📅</div>
+                    <h3>Appointment Booking Agent</h3>
+                    <p>Manages scheduling, sends reminders, handles rescheduling, syncs with your calendar.</p>
+                    <span class="template-tag">Best for: Trades, Healthcare, Consulting</span>
+                </div>
+                <div class="template-card">
+                    <div class="template-icon">🔍</div>
+                    <h3>Research & Intel Agent</h3>
+                    <p>Competitor monitoring, lead enrichment, market research, report generation.</p>
+                    <span class="template-tag">Best for: Sales teams, Strategy</span>
+                </div>
             </div>
         </div>
-    </div></section>
+    </section>
 
-    <footer><div class="container">
-        <div class="footer-grid">
-            <div>
-                <h3>TradesWeb Templates</h3>
-                <p>Professional website templates for trades businesses. Launch in 30 minutes, no coding required.</p>
-                <p>Questions? <a href="mailto:Bizclaw@outlook.com">Bizclaw@outlook.com</a></p>
-            </div>
-            <div>
-                <h3>Templates</h3>
-                <p>Plumber</p>
-                <p>Electrician</p>
-                <p>HVAC</p>
-                <p>Landscaping</p>
-                <p>Roofing</p>
-            </div>
-            <div>
-                <h3>Support</h3>
-                <p><a href="#">Setup Guide</a></p>
-                <p><a href="#">Customization Tips</a></p>
-                <p><a href="#">Hosting Options</a></p>
-                <p><a href="#">Contact</a></p>
-            </div>
-            <div>
-                <h3>Free SaaS Resources</h3>
-                <p><a href="saas.html">All playbooks</a></p>
-                <p><a href="saas/how-to-find-first-10-customers.html">Find your first 10 customers</a></p>
-                <p><a href="saas/landing-page-roast-guide.html">Landing page roast guide</a></p>
-                <p><a href="saas/cold-email-benchmarks-2026.html">Cold email benchmarks 2026</a></p>
+    <!-- Pricing Section -->
+    <section class="section" id="pricing">
+        <div class="container">
+            <h2 class="section-title center">Simple Pricing. Real Value.</h2>
+            <p class="section-subtitle center">No setup fees. No hidden costs. Cancel anytime.</p>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount">1,500</span>
+                        <span class="period">/mo</span>
+                    </div>
+                    <p class="price-note">+ $500 one-time setup</p>
+                    <ul class="features">
+                        <li>1 Agent template</li>
+                        <li>WhatsApp Business</li>
+                        <li>Email integration</li>
+                        <li>Up to 500 conversations/mo</li>
+                        <li>Business hours support</li>
+                        <li>Monthly optimization report</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-secondary">Get Started</a>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <div class="popular-badge">Most Popular</div>
+                    <h3>Professional</h3>
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount">3,500</span>
+                        <span class="period">/mo</span>
+                    </div>
+                    <p class="price-note">+ $1,000 one-time setup</p>
+                    <ul class="features">
+                        <li>3 Agent templates</li>
+                        <li>WhatsApp + SMS + Email</li>
+                        <li>Voice call handling</li>
+                        <li>Up to 2,500 conversations/mo</li>
+                        <li>Priority support</li>
+                        <li>Weekly optimization reviews</li>
+                        <li>Custom tool integrations</li>
+                        <li>Human handoff dashboard</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Get Started</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount">7,500</span>
+                        <span class="period">/mo</span>
+                    </div>
+                    <p class="price-note">Custom setup</p>
+                    <ul class="features">
+                        <li>Unlimited agent templates</li>
+                        <li>All channels + custom</li>
+                        <li>Unlimited conversations</li>
+                        <li>Dedicated account manager</li>
+                        <li>24/7 priority support</li>
+                        <li>Weekly strategy calls</li>
+                        <li>Custom AI model training</li>
+                        <li>SLA guarantee</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-secondary">Contact Sales</a>
+                </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>© 2026 TradesWeb Templates. All rights reserved.</p>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section section-dark" id="faq">
+        <div class="container">
+            <h2 class="section-title center">Frequently Asked Questions</h2>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3>How long does setup take?</h3>
+                    <p>Discovery to live deployment typically takes 5-7 business days. Complex integrations may take 2 weeks. Rush deployment available for +$500.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What channels does the agent support?</h3>
+                    <p>WhatsApp Business API (official), SMS, email, voice calls, and web chat. We can also integrate with Telegram, Slack, Discord, and custom webhooks.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Where does the agent run?</h3>
+                    <p>We host on secure cloud infrastructure (your choice of AWS, GCP, or Azure region). For Enterprise, we can deploy on your private cloud or on-premise.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What happens when the agent can't handle something?</h3>
+                    <p>The agent is trained to recognize its limits and escalate gracefully. It passes full conversation context to a human, including customer intent, data looked up, and suggested next steps.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I see what the agent is doing?</h3>
+                    <p>Yes. Every conversation is logged with full reasoning. You get a real-time dashboard showing active conversations, escalation rates, customer sentiment, and agent performance metrics.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What's included in the monthly retainer?</h3>
+                    <p>Hosting, monitoring, model updates, security patches, conversation volume, quarterly business reviews, and continuous optimization based on conversation data.</p>
+                </div>
+            </div>
         </div>
-    </div></footer>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section" id="contact">
+        <div class="container center">
+            <h2 class="section-title">Ready to Deploy Your Agent?</h2>
+            <p class="section-subtitle">Book a 30-minute discovery call. No pitch, just a conversation about where an agent fits in your business.</p>
+            <div class="cta-buttons">
+                <a href="mailto:hello@bizclaw.com?subject=Agent Setup Discovery Call" class="btn btn-large btn-primary">Book Discovery Call</a>
+                <a href="https://cal.com/bizclaw" class="btn btn-large btn-secondary">Pick a Time on Cal.com</a>
+            </div>
+            <p class="cta-note">Or email us directly: <a href="mailto:hello@bizclaw.com">hello@bizclaw.com</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo">BizClaw</span>
+                    <p>AI agents that actually work for your business.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <a href="#templates">Templates</a>
+                        <a href="#pricing">Pricing</a>
+                        <a href="#faq">FAQ</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <a href="#contact">Contact</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Privacy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 BizClaw. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
