@@ -1,0 +1,72 @@
+version: "3.9"
+
+services:
+  openclaw-agent:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: openclaw-agent
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      # AI Model Keys (at least one required)
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+
+      # Telegram Bot (for Telegram channel)
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+
+      # Email (IMAP/SMTP for email channel)
+      - IMAP_HOST=${IMAP_HOST}
+      - IMAP_PORT=${IMAP_PORT}
+      - IMAP_USER=${IMAP_USER}
+      - IMAP_PASSWORD=${IMAP_PASSWORD}
+      - SMTP_HOST=${SMTP_HOST}
+      - SMTP_PORT=${SMTP_PORT}
+      - SMTP_USER=${SMTP_USER}
+      - SMTP_PASSWORD=${SMTP_PASSWORD}
+
+      # Slack (for Slack channel)
+      - SLACK_BOT_TOKEN=${SLACK_BOT_TOKEN}
+      - SLACK_SIGNING_SECRET=${SLACK_SIGNING_SECRET}
+
+      # Twilio (for SMS/voice channels)
+      - TWILIO_ACCOUNT_SID=${TWILIO_ACCOUNT_SID}
+      - TWILIO_AUTH_TOKEN=${TWILIO_AUTH_TOKEN}
+      - TWILIO_PHONE_NUMBER=${TWILIO_PHONE_NUMBER}
+
+      # Web Chat (for website widget)
+      - WEB_CHAT_ENABLED=${WEB_CHAT_ENABLED:-true}
+
+      # Agent Configuration
+      - AGENT_MODEL=${AGENT_MODEL:-anthropic/claude-sonnet-4-20250514}
+      - AGENT_NAME=${AGENT_NAME:-bizclaw-agent}
+      - TZ=${TZ:-UTC}
+
+    volumes:
+      # Persist agent memory, workspace files, and configuration
+      - agent-memory:/app/agent/memory
+      - agent-workspace:/app/agent/workspace
+      - agent-config:/app/agent/.openclaw
+
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+volumes:
+  agent-memory:
+    driver: local
+  agent-workspace:
+    driver: local
+  agent-config:
+    driver: local
