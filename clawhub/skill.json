@@ -1,0 +1,88 @@
+{
+  "name": "bizclaw-templates",
+  "version": "1.0.0",
+  "description": "Production-ready OpenClaw agent SOUL.md templates for business use cases — customer support, lead qualification, appointment booking, and research.",
+  "author": {
+    "name": "BizClaw",
+    "url": "https://bizclaw.com",
+    "email": "hello@bizclaw.com"
+  },
+  "license": "MIT",
+  "homepage": "https://cyberleo986.github.io/bizclaw.github.io/",
+  "repository": "https://github.com/cyberleo986/bizclaw.github.io",
+  "keywords": [
+    "openclaw",
+    "agent",
+    "soul.md",
+    "template",
+    "customer-support",
+    "lead-qualification",
+    "appointment-booking",
+    "research",
+    "business",
+    "production-ready"
+  ],
+  "categories": [
+    "business",
+    "customer-support",
+    "sales",
+    "scheduling",
+    "research"
+  ],
+  "templates": [
+    {
+      "id": "customer-support",
+      "name": "Customer Support Agent",
+      "description": "Pre-configured for support workflows. Handles inquiries, troubleshooting, returns with memory of products and policies.",
+      "tags": ["e-commerce", "saas", "support"],
+      "price": "free",
+      "file": "downloads/customer-support-soul.md"
+    },
+    {
+      "id": "lead-qualification",
+      "name": "Lead Qualification Agent",
+      "description": "Pre-configured for sales workflows. Researches prospects, qualifies leads, schedules calls, updates CRM.",
+      "tags": ["b2b", "agencies", "sales"],
+      "price": "$19",
+      "file": "downloads/lead-qualification-soul.md"
+    },
+    {
+      "id": "appointment-booking",
+      "name": "Appointment Booking Agent",
+      "description": "Pre-configured for scheduling. Calendar integration, reminders, rescheduling, team sync.",
+      "tags": ["services", "healthcare", "scheduling"],
+      "price": "$19",
+      "file": "downloads/appointment-booking-soul.md"
+    },
+    {
+      "id": "research-intel",
+      "name": "Research & Intel Agent",
+      "description": "Pre-configured for research. Web search, data analysis, report generation, competitor monitoring, lead enrichment.",
+      "tags": ["sales", "strategy", "research"],
+      "price": "$19",
+      "file": "downloads/research-intel-soul.md"
+    }
+  ],
+  "deployPackages": [
+    {
+      "id": "deploy-package",
+      "name": "Deploy Package",
+      "description": "Template + Docker deployment package with Dockerfile, docker-compose, bot integration, and setup instructions.",
+      "price": "$49",
+      "includes": ["1 agent template", "Dockerfile", "docker-compose.yml", "Telegram bot setup", "Web chat widget", "Setup guide"]
+    }
+  ],
+  "managedService": {
+    "id": "managed",
+    "name": "BizClaw Managed",
+    "description": "Fully managed OpenClaw agent hosting with email, web chat, and Telegram channels.",
+    "price": "$29/month",
+    "includes": ["1 agent template", "Managed hosting", "Email + web chat + Telegram", "500 conversations/mo", "Priority support", "Monthly optimization"]
+  },
+  "links": {
+    "website": "https://cyberleo986.github.io/bizclaw.github.io/",
+    "freeTemplate": "https://cyberleo986.github.io/bizclaw.github.io/free-template.html",
+    "pricing": "https://cyberleo986.github.io/bizclaw.github.io/#pricing",
+    "templates": "https://cyberleo986.github.io/bizclaw.github.io/templates.html"
+  }
+}
