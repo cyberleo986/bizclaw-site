@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1024px; height: 1024px; background: #1a1a2e; display: flex; align-items: center; justify-content: center; font-family: 'Inter', Arial, sans-serif; }
+  .logo-wrap { text-align: center; }
+  .claw { width: 520px; height: 520px; margin: 0 auto; }
+  .wordmark { font-size: 132px; font-weight: 800; color: #ffffff; letter-spacing: -6px; margin-top: 10px; }
+  .wordmark span { color: #ff6b35; }
+</style>
+</head>
+<body>
+  <div class="logo-wrap">
+    <svg class="claw" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Big pincer (upper) -->
+      <path d="M150 370 Q100 150 260 70 Q380 15 480 70 L440 160 Q350 120 275 155 Q195 190 205 280 Q210 330 195 370 Z" fill="#ff6b35"/>
+      <!-- Small pincer (lower) -->
+      <path d="M155 395 Q185 470 300 485 Q395 495 445 450 L390 375 Q350 405 295 400 Q230 393 210 370 Z" fill="#ff8c5a"/>
+      <!-- Joint -->
+      <circle cx="150" cy="378" r="58" fill="#ff6b35"/>
+      <!-- Arm -->
+      <path d="M150 436 Q120 470 95 512 L0 512 Q40 452 92 415 Z" fill="#ff6b35"/>
+    </svg>
+    <div class="wordmark">Biz<span>Claw</span></div>
+  </div>
+</body>
+</html>
